@@ -2,7 +2,6 @@
 import java.util.Scanner;
 
 public class LineByLine {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -11,17 +10,14 @@ public class LineByLine {
         if (input.equals("")) {
             return;
         }
-        
-        String[] fragments = input.split(" ");
-        int index = 0;
-        while (!(input.equals("")) && index < fragments.length) {
-            for (int i = 0; i < fragments.length; i++) {
-                System.out.println(fragments[i]);
-                index++;
+        while (!input.equals("")) {
+            String[] fragments = input.split(" ");
+            for (String fragment : fragments) {
+                System.out.println(fragment);
             }
             input = scanner.nextLine();
-            fragments = input.split(" ");
-            index = 0;
         }
     }
 }
+
+  
